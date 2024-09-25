@@ -1,0 +1,679 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Rose", serif;
+  cursor: url("../images/cursor.png") 2 2, auto;
+}
+*:active {
+  cursor: url("../images/cursor.png") 2 2, auto;
+}
+cursor:hover {
+  cursor: url("../images/cursor.png") 2 2, auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 9;
+  padding: 0.5rem;
+}
+/* javascript 추가할 클래스 */
+header.on {
+  background-color: rgb(237, 237, 237);
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  cursor: url("../images/cursor2.png") 2 2, auto;
+  color: #fff;
+}
+
+header h1 button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+header nav button {
+  font-size: 1rem;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 100vh;
+  background: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  cursor:  url("../images/cursor2.png") 2 2, auto;
+  color: #5380b5;
+}
+
+header h1 button {
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav button {
+  font-size: 1.2rem;
+}
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 960px;
+  background-color: #ededed;
+}
+.airplane-windows {
+  display: flex;
+  gap: 173px;
+}
+
+.window {
+  width: 408px;
+  height: 548px;
+  border-radius: 150px;
+  border: none solid white;
+  overflow: hidden;
+  text-align: center;
+  line-height: 548px;
+  font-size: 24px;
+}
+
+#main .window .portfolio {
+  width: 166px;
+  height: 71px;
+  border-radius: 150px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: white;
+  cursor:  url("../images/cursor2.png") 2 2, auto;
+}
+#main .sky-2 {
+  width: 100%;
+  background-color: lightblue;
+  color: white;
+  /* background: url(../images/cloud.png) no-repeat center/cover; */
+}
+#main .sky-2 {
+  width: 100%;
+  background-color: lightblue;
+  color: white;
+  /* background: url(../images/cloud.png) no-repeat center/cover; */
+}
+#main .sky-3 {
+  width: 100%;
+  background-color: lightblue;
+  color: white;
+  /* background: url(../images/cloud.png) no-repeat center/cover; */
+}
+
+main .cloud {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #5380b5;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: updown 1s infinite;
+}
+@keyframes updown {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 1.5rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+
+/* section 공통 */
+section {
+  padding: 5rem 0;
+}
+section:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+section .title {
+  margin-bottom: 3rem;
+}
+section .title h4 {
+  font-size: 1.3rem;
+  color: #5380b5;
+}
+section .title h2 {
+  font-size: 3.5rem;
+}
+
+/* profile */
+/* #profile {
+  background: url("../images/apple-background.jpg") no-repeat center/cover fixed;
+} */
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.background-frame {
+  background-color: white;
+  width: 71rem;
+  height: 42rem;
+}
+.frame {
+  background-color: #e2e4f1;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+.frame-menu {
+  list-style: none;
+  display: flex;
+}
+.frame-menu li {
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+.frame > img {
+  width: 4.3rem;
+  height: 2.5rem;
+  margin: 0 0.5rem 0.3rem 0;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 27rem;
+}
+.circle > div {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+}
+.red {
+  background-color: #fa6455;
+}
+.yellow {
+  background-color: #fcbe2a;
+}
+
+.green {
+  background-color: #24bc32;
+}
+
+.profile-inner .left {
+  width: 42%;
+  margin-right: 3%;
+  float: left;
+  padding: 3rem;
+  position: relative;
+}
+.profile-inner .left .txt {
+  height: 13rem;
+}
+.profile-inner .left > img {
+  max-width: 100%;
+  height: 13rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 9;
+}
+.profile-inner .tool-icon {
+  width: 24rem;
+  height: 16.5rem;
+  background-color: #eff5f9;
+  border-radius: 20px;
+}
+.profile-inner .tool-icon img {
+  width: 25%;
+  height: 90px;
+  margin: 1.5rem 0.5rem 0rem 1rem;
+}
+
+.profile-inner .left .txt p {
+  font-size: 36px;
+  margin-top: 24px;
+}
+.profile-inner .left .txt h4 {
+  color: #7e7e7e;
+}
+
+.profile-inner .right .top {
+  display: flex;
+}
+.profile-inner .right .bottom {
+  display: flex;
+}
+
+.profile-inner .cording-2 {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.profile-inner .video-2 {
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+.profile-inner .right .top-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 3%;
+}
+.profile-inner .top-right p {
+  text-align: center;
+}
+.profile-inner .bottom-right > p {
+  text-align: center;
+}
+.profile-inner .right .bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.profile-inner .right .cording-1 {
+  width: 105px;
+  height: 139px;
+  border-radius: 20px;
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  translate: (-15%, -55%);
+  z-index: 9;
+}
+.profile-inner .right .cording-2 {
+  width: 417px;
+  height: 234px;
+  border-radius: 20px;
+  position: relative;
+}
+.profile-inner .right .video-1 {
+  width: 98px;
+  height: 121px;
+  border-radius: 20px;
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  translate: (-65%, -65%);
+  z-index: 9;
+}
+.profile-inner .right .video-2 {
+  width: 291px;
+  height: 218px;
+  border-radius: 20px;
+  position: relative;
+}
+.profile-inner .right h4 {
+  color: #7e7e7e;
+}
+.profile-inner .right p {
+  font-size: 20px;
+}
+.profile-inner .right .text {
+  font-size: 13px;
+}
+
+/* Tim-Hortons */
+#clone-coding .container {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  align-items: center;
+}
+.tim-Hortons {
+  display: flex;
+}
+.tim-Hortons .left {
+  width: 100%;
+}
+.right {
+  width: 40%;
+}
+.right .cloneimg {
+  width: 100%;
+  position: relative;
+}
+.tim-Hortons .left h3 {
+  font-size: 5rem;
+  color: #d0112b;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+}
+.tim-Hortons .left p {
+  font-size: 1.5rem;
+  align-items: center;
+}
+.tim-Hortons .left p:nth-child(4) {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.tim-Hortons .left button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  width: 30%;
+  border: none;
+  color: #fff;
+  background-color: #d0112b;
+  cursor: url;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.tim-Hortons .left button:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  color: #d0112b;
+}
+
+#clone-coding .right img {
+  width: 55%;
+  transform: rotate(-20deg);
+  position: absolute;
+  right: 0;
+}
+
+/* typography */
+#typography {
+  background: url("../images/apple-background2.jpg") no-repeat center/cover
+    fixed;
+}
+.typo-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.typo-me .typo-inner {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.typo-me .typo-inner img {
+  width: 100%;
+  transition: 0.8s ease-in-out;
+  cursor:  url("../images/cursor2.png") 2 2, auto;
+}
+.typo-me .typo-inner:hover {
+  transform: scale(1.3);
+  transition: 0.8s ease-in-out;
+}
+.typo-me .typo-inner:hover img {
+  filter: brightness(30%);
+}
+.typo-me .typo-inner button {
+  width: 60%;
+  padding: 1rem;
+  background-color: #244a97;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+  cursor:  url("../images/cursor2.png") 2 2, auto;
+}
+.typo-me .typo-inner:hover button {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.typo-me .typo-inner:nth-child(3) {
+  margin-right: 0;
+}
+.typo-me .typo-inner img {
+  width: 100%;
+}
+.typo-me .typo-inner strong {
+  color: #5380b5;
+  max-width: 0.5rem 0;
+  display: block;
+}
+
+/* portfolio */
+.portfolio-me {
+  display: flex;
+  width: 100%;
+}
+
+.portfolio-me li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 60px 40px 90px;
+  transition: all .5s;
+  position: relative;
+}
+
+.portfolio-me  li:hover {
+  flex: 1.5;
+}
+
+.portfolio-me li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 100%;
+  height: 95%;
+  background-color: rgb(45, 117, 146);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+
+}
+.portfolio-me li:hover::before {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+
+}
+
+.portfolio-me li .portfolio-inner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+  background-color: #ededed;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.portfolio-me li .portfolio-inner .txt h3 {
+  color: #244a97;
+  font-size: 2rem;
+  transition: all .5s;
+}
+
+.portfolio-me li:hover .portfolio-inner .txt h3 {
+  font-size: 4rem;
+  padding-top: 0;
+  color: #051433;
+}
+.portfolio-me li:hover .portfolio-inner .txt p {
+  color: black;
+}
+.portfolio-me li .portfolio-inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup{
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  padding: 20vh 7vw 14vh 20vw;
+  display: flex;
+  opacity: 0;
+  transition: all .5s;
+}
+.popup.on {
+  display: block;
+  left: 0;
+  opacity: 1;
+}
+.popup .txt {
+  width: 25%;
+  height: 100%;
+}
+.popup .txt h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.popup .txt p {
+  color: #999;
+  margin-bottom: 60px;
+  font-size: 1.5rem;
+}
+
+.popup figure {
+  width: 70%;
+  height: 100%;
+}
+.popup figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* contact */
+#contact {
+  width: 100%;
+  height: 100vh;
+  background: #051433;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.contact-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.contact-inner .darksky {
+  width: 100%;
+  background: url(../images/darksky.jpg) no-repeat center/cover;
+}
+
+.contact-inner .landing {
+  width: 166px;
+  height: 71px;
+  border-radius: 150px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: white;
+  cursor:  url("../images/cursor2.png") 2 2, auto;
+}
+.contact-bottom {
+  position: absolute;
+  bottom: 2rem; /* 바닥에서의 간격 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: calc(3 * 400px); /* 3개의 아이템의 폭 */
+}
+
+.contact-bottom .txt {
+  width: 315px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #154275;
+  transition-property: all;
+  transition-duration: 0.8s;
+  cursor: url("../images/cursor2.png") 2 2, auto;
+}
+.contact-bottom .txt:hover {
+  color: white;
+  text-decoration: underline;
+  width: 350px;
+}
+
+.gotop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+.gotop span {
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+}
